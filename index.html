@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Júlia Costa - Especialista em Cachos</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#faf5ff', // Fundo muito suave (Purple-50/Rose mix)
+              primary: '#d8b4fe',    // Lilás pastel
+              secondary: '#fda4af',  // Rosa pastel
+              textMain: '#4a044e',   // Roxo escuro para texto
+              textBody: '#701a75',   // Roxo médio para descrições
+            },
+            animation: {
+              'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'tilt': 'tilt 10s infinite linear',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              tilt: {
+                '0%, 50%, 100%': { transform: 'rotate(0deg)' },
+                '25%': { transform: 'rotate(0.5deg)' },
+                '75%': { transform: 'rotate(-0.5deg)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            },
+          }
+        }
+      }
+    </script>
+    
+    <!-- Custom CSS -->
+    <style>
+      body {
+        background-color: #fdf4ff; /* Rose/Purple tint light */
+        color: #4a4a4a;
+        font-family: 'Inter', sans-serif;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #fdf4ff; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #e879f9; 
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #d946ef; 
+      }
+    </style>
+</head>
+<body class="antialiased selection:bg-purple-200 selection:text-purple-900">
+
+    <!-- Background Wrapper -->
+    <div class="min-h-screen w-full relative overflow-hidden bg-gradient-to-br from-orange-50 via-white to-purple-50">
+      
+      <!-- Ambient Glows (Pastel) -->
+      <div class="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-300/30 rounded-full blur-[100px] pointer-events-none animate-pulse-slow"></div>
+      <div class="fixed top-[20%] right-[-5%] w-[400px] h-[400px] bg-pink-300/30 rounded-full blur-[80px] pointer-events-none animate-float"></div>
+      <div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-orange-200/40 rounded-full blur-[90px] pointer-events-none"></div>
+
+      <!-- Main Content Container -->
+      <div class="relative z-10 w-full max-w-md mx-auto px-4 py-12 flex flex-col min-h-screen">
+        
+        <!-- Profile Header -->
+        <header class="flex flex-col items-center justify-center mb-10 text-center">
+          <div class="relative group">
+            <!-- Animated Glow Ring (Soft Gradient) -->
+            <div class="absolute -inset-1 rounded-full bg-gradient-to-r from-pink-300 to-purple-300 opacity-70 blur group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+            
+            <!-- Avatar Container -->
+            <div class="relative w-32 h-32 sm:w-36 sm:h-36 rounded-full p-1 bg-white overflow-hidden ring-4 ring-white/50 shadow-xl">
+               <img
+                src="https://images.unsplash.com/photo-1523825036634-aab3cce05919?q=80&w=400&h=400&fit=crop"
+                alt="Júlia Costa"
+                class="w-full h-full object-cover rounded-full hover:scale-110 transition-transform duration-700"
+              />
+            </div>
+          </div>
+
+          <h1 class="mt-6 text-3xl font-bold tracking-tight text-gray-800 drop-shadow-sm">
+            Júlia Costa
+          </h1>
+          
+          <div class="mt-3 flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/40 border border-white/60 shadow-sm backdrop-blur-sm">
+            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+            <p class="text-xs font-semibold text-gray-600 uppercase tracking-widest">
+              Especialista em Cachos & Transição
+            </p>
+          </div>
+        </header>
+
+        <!-- Links List -->
+        <main class="w-full flex flex-col gap-3">
+          
+          <!-- Link 1: Agendamento -->
+          <a href="#" target="_blank" rel="noopener noreferrer"
+             class="group relative flex items-center justify-between w-full p-3 pr-2 sm:p-4 mb-2
+                    bg-white/60 backdrop-blur-md 
+                    border border-white/60 rounded-2xl shadow-sm
+                    transition-all duration-300 ease-out
+                    hover:bg-white/90 hover:border-purple-200 hover:scale-[1.02] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+            <!-- Hover Glow -->
+            <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-100/0 via-purple-50/50 to-pink-100/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+            
+            <!-- Left Text -->
+            <div class="flex flex-col flex-1 pr-4 z-10">
+              <h2 class="text-lg font-bold text-gray-800 group-hover:text-purple-700 transition-colors">Agendar Horário</h2>
+              <p class="mt-1 text-xs sm:text-sm text-gray-500 font-medium line-clamp-2 leading-relaxed">
+                Reserve seu corte a seco, hidratação profunda ou consultoria capilar.
+              </p>
+              <div class="mt-3 flex items-center gap-1 text-xs font-bold text-purple-600 group-hover:text-purple-500 transition-colors">
+                <span>Ver Disponibilidade</span>
+                <!-- Lucide ArrowRight -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </div>
+            </div>
+            
+            <!-- Right Image -->
+            <div class="relative shrink-0 z-10">
+              <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden shadow-md border border-white group-hover:border-purple-100 transition-colors">
+                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=200&h=200&fit=crop" alt="Agendar Horário" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+          </a>
+
+          <!-- Link 2: Guia de Finalização -->
+          <a href="#" target="_blank" rel="noopener noreferrer"
+             class="group relative flex items-center justify-between w-full p-3 pr-2 sm:p-4 mb-2
+                    bg-white/60 backdrop-blur-md 
+                    border border-white/60 rounded-2xl shadow-sm
+                    transition-all duration-300 ease-out
+                    hover:bg-white/90 hover:border-purple-200 hover:scale-[1.02] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+            <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-100/0 via-purple-50/50 to-pink-100/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+            <div class="flex flex-col flex-1 pr-4 z-10">
+              <h2 class="text-lg font-bold text-gray-800 group-hover:text-purple-700 transition-colors">Guia de Finalização</h2>
+              <p class="mt-1 text-xs sm:text-sm text-gray-500 font-medium line-clamp-2 leading-relaxed">
+                Aprenda a técnica correta para cachos definidos e sem frizz em casa.
+              </p>
+              <div class="mt-3 flex items-center gap-1 text-xs font-bold text-purple-600 group-hover:text-purple-500 transition-colors">
+                <span>Baixar E-book</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </div>
+            </div>
+            <div class="relative shrink-0 z-10">
+              <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden shadow-md border border-white group-hover:border-purple-100 transition-colors">
+                <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=200&h=200&fit=crop" alt="Guia de Finalização" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+          </a>
+
+          <!-- Link 3: Produtos Favoritos -->
+          <a href="#" target="_blank" rel="noopener noreferrer"
+             class="group relative flex items-center justify-between w-full p-3 pr-2 sm:p-4 mb-2 
+                    bg-white/60 backdrop-blur-md 
+                    border border-white/60 rounded-2xl shadow-sm
+                    transition-all duration-300 ease-out
+                    hover:bg-white/90 hover:border-purple-200 hover:scale-[1.02] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+            <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-100/0 via-purple-50/50 to-pink-100/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+            <div class="flex flex-col flex-1 pr-4 z-10">
+              <h2 class="text-lg font-bold text-gray-800 group-hover:text-purple-700 transition-colors">Meus Produtos Favoritos</h2>
+              <p class="mt-1 text-xs sm:text-sm text-gray-500 font-medium line-clamp-2 leading-relaxed">
+                Lista exclusiva com os melhores cremes, óleos e gelatinas que uso no salão.
+              </p>
+              <div class="mt-3 flex items-center gap-1 text-xs font-bold text-purple-600 group-hover:text-purple-500 transition-colors">
+                <span>Ver Lista na Amazon</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </div>
+            </div>
+            <div class="relative shrink-0 z-10">
+              <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden shadow-md border border-white group-hover:border-purple-100 transition-colors">
+                <img src="https://images.unsplash.com/photo-1556228720-19160d70eb6c?q=80&w=200&h=200&fit=crop" alt="Produtos Favoritos" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+          </a>
+
+          <!-- Link 4: Canal do Youtube -->
+          <a href="#" target="_blank" rel="noopener noreferrer"
+             class="group relative flex items-center justify-between w-full p-3 pr-2 sm:p-4 mb-2
+                    bg-white/60 backdrop-blur-md 
+                    border border-white/60 rounded-2xl shadow-sm
+                    transition-all duration-300 ease-out
+                    hover:bg-white/90 hover:border-purple-200 hover:scale-[1.02] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+            <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-100/0 via-purple-50/50 to-pink-100/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+            <div class="flex flex-col flex-1 pr-4 z-10">
+              <h2 class="text-lg font-bold text-gray-800 group-hover:text-purple-700 transition-colors">Canal no Youtube</h2>
+              <p class="mt-1 text-xs sm:text-sm text-gray-500 font-medium line-clamp-2 leading-relaxed">
+                Vlogs semanais, tutoriais passo-a-passo e resenhas sinceras.
+              </p>
+              <div class="mt-3 flex items-center gap-1 text-xs font-bold text-purple-600 group-hover:text-purple-500 transition-colors">
+                <span>Assistir Vídeos</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </div>
+            </div>
+            <div class="relative shrink-0 z-10">
+              <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden shadow-md border border-white group-hover:border-purple-100 transition-colors">
+                <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=200&h=200&fit=crop" alt="Youtube" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+          </a>
+
+        </main>
+
+        <!-- Social Footer -->
+        <footer class="mt-auto pt-12 pb-6">
+          <div class="flex justify-center items-center gap-6">
+            
+            <!-- Instagram -->
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="instagram"
+               class="p-2.5 text-purple-400/80 hover:text-purple-600 transition-all duration-300 hover:scale-110 hover:bg-purple-100 rounded-full">
+               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+
+            <!-- Whatsapp (Novo para contexto de cabeleireira) -->
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="whatsapp"
+               class="p-2.5 text-purple-400/80 hover:text-green-600 transition-all duration-300 hover:scale-110 hover:bg-green-100 rounded-full">
+               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:contato@juliacosta.com" target="_blank" rel="noopener noreferrer" aria-label="email"
+               class="p-2.5 text-purple-400/80 hover:text-purple-600 transition-all duration-300 hover:scale-110 hover:bg-purple-100 rounded-full">
+               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+            
+            <!-- Tiktok (Relevante para cabeleireira) -->
+             <a href="#" target="_blank" rel="noopener noreferrer" aria-label="tiktok"
+               class="p-2.5 text-purple-400/80 hover:text-pink-600 transition-all duration-300 hover:scale-110 hover:bg-pink-100 rounded-full">
+               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+            </a>
+
+          </div>
+          <p class="text-center text-[10px] text-gray-400 mt-6 tracking-widest uppercase font-medium">
+            © 2024 Júlia Costa • Natural Hair
+          </p>
+        </footer>
+
+      </div>
+    </div>
+</body>
+</html>
